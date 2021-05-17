@@ -1,0 +1,12 @@
+{% extends "stock/base.html" %}
+{% block content %}
+<p>Type</p>
+ <ul>
+ {% for type in types %}
+ <li> <a href="{% url 'stock:type' type.id %}">{{ type }}</a>
+    </li>
+ {% empty %}
+<li>No types have been added yet.</li>
+ {% endfor %}
+ </ul>
+{% endblock content %}

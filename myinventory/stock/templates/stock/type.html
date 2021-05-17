@@ -1,0 +1,17 @@
+{% extends 'stock/base.html' %}
+{% block content %}
+<p>Type: {{ type }}</p>
+
+
+<p>Items:</p>
+<ul>
+     {% for item in items %}
+    <li>
+ <p>{{ item.date_added|date:'M d, Y H:i' }}</p>
+ <p>{{ item.Name|linebreaks }}</p>
+    </li>
+     {% empty %}
+    <li>There are no types for this item yet.</li>
+    {% endfor %}
+    </ul>
+    {% endblock content %}

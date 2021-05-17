@@ -1,0 +1,10 @@
+<head>
+    {% load static %}
+    <link rel="stylesheet"  href="{% static 'css/style.css'  %}">
+  </head>
+
+<p>
+    <a href="{% url 'stock:index' %}">Stock Inventory</a> -
+    <a href="{% url 'stock:types' %}">My Items</a>
+</p>
+    {% block content %}{% endblock content %}
